@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Base directory
-BASE_DIR="/opt/comfyui/ComfyUI/models"
+BASE_DIR="/workspace/comfyui/models"
 
 # VAE
 VAE_DIR="${BASE_DIR}/vae"

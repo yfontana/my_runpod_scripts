@@ -42,4 +42,27 @@ cd ComfyUI/
 echo "Installing/updating requirements"
 pip install -r requirements.txt
 
+# Create the extra_model_paths.yaml file
+echo "Creating extra_model_paths.yaml"
+cat > extra_model_paths.yaml << 'EOL'
+my_custom_config:
+  base_path: /workspace/comfyui/
+  # You can use is_default to mark that these folders should be listed first, and used as the default dirs for eg downloads
+  is_default: true
+  checkpoints: models/checkpoints/
+  clip: models/clip/
+  clip_vision: models/clip_vision/
+  configs: models/configs/
+  controlnet: models/controlnet/
+  diffusers: models/diffusers/
+  diffusion_models: |
+               models/diffusion_models
+               models/unet
+  embeddings: models/embeddings/
+  loras: models/loras/
+  text_encoders: models/text_encoders/
+  upscale_models: models/upscale_models/
+  vae: models/vae/
+EOL
+
 echo "ComfyUI installation completed"

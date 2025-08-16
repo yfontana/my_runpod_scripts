@@ -14,7 +14,7 @@ cd "$INSTALL_DIR"
 # Create virtual environment if it doesn't exist
 if [ ! -d "venv_comfy" ]; then
     echo "Creating virtual environment"
-    python -m venv venv_comfy
+    python -m venv venv_comfy --system-site-packages
 fi
 
 # Activate virtual environment
